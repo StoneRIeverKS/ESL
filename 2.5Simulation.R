@@ -76,6 +76,10 @@ png("次元数と最近傍点との距離の平均.png", height=300, width=300)
 plot(1:P, aveDistance, type="b", col="red", xlab="次元数", ylab="最近傍点との距離")
 dev.off()
 
+png("次元数と最近傍点との距離の平均と立方体の対角線の割合.png", height=300, width=300)
+plot(1:P, aveDistance/(sqrt(1:P)/2), type="b", col="red", xlab="次元数", ylab="最近傍点との距離と対角線の半分との割合")
+dev.off()
+
 png("MSE, bias, 分散.png", height=400, width=400)
 plot(1:P, aveMSE, type="b", col="red", ylim=c(0,1), xlab="次元数", ylab="MSE,Bias,分散")
 par(new=T)
