@@ -14,7 +14,7 @@ K = 1000
 P = 15
 
 ##データ数
-datasize = 10^3
+datasize = 500
 
 ##結果を格納するベクトル
 ###EPE
@@ -80,8 +80,8 @@ for(p in 1:P){
 
 
 #########################図の作成######################
-png("次元数EPE_2.png", height=300, width=300)
-plot(1:P, EPE_1, type="b", col="red", ylim=c(0,3), xlab="次元数", ylab="EPE")
+png("次元数EPE_2.png", height=500, width=500)
+plot(1:P, EPE_1, type="b", col="red", ylim=c(1.2,2.5), xlab="次元数", ylab="EPE")
 par(new=T)
-plot(1:P, EPE_Linear, type="b", col="blue", ylim=c(0,3), xlab="", ylab="")
+plot(1:P, EPE_Linear, type="b", col="blue", ylim=c(1.2,2.5), xlab="", ylab="")
 dev.off()
